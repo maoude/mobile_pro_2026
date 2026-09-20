@@ -1,0 +1,6 @@
+# Source: 002_lect_01_01.tex, section 6. Lab - Quick Start
+# Shell commands (not Dart).
+
+flutter create business_card_app
+cd business_card_app
+flutter run
