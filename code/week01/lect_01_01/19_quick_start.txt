@@ -1,5 +1,36 @@
-# Source: 002_lect_01_01.tex, section 6. Lab - Quick Start
-# Shell commands (not Dart).
+# =====================================================================
+# Lecture 1.1, section 6 (Lab): Quick start - create and run a Flutter app
+# =====================================================================
+# These are shell commands, not Dart. Type them one by one in a terminal
+# (in VS Code: Terminal > New Terminal).
+#
+# BEFORE YOU START
+#   Flutter is installed and "flutter doctor" shows no problems
+#   (see the install guides in ../../lectures/).
+#
+# THE COMMANDS
+#   flutter create business_card_app
+#   cd business_card_app
+#   flutter run
+#
+# WHAT EACH COMMAND DOES
+#   flutter create business_card_app  creates a new folder called
+#                                     business_card_app with a working
+#                                     "counter" app inside.
+#   cd business_card_app              goes into that folder.
+#   flutter run                       builds the app and starts it on the
+#                                     device you choose (an emulator, a
+#                                     phone, Chrome or Windows).
+#
+# EXPECTED RESULT
+#   * "flutter create" ends with a line like:
+#       "Your application code is in business_card_app\lib\main.dart."
+#   * "flutter run" asks which device to use if several are connected, then
+#     opens the app: a page titled "Flutter Demo Home Page" with a "+"
+#     button. Each tap on "+" adds 1 to the counter in the middle.
+#   * In the terminal, press  r  for hot reload,  R  for hot restart,
+#     q  to quit.
+# =====================================================================
 
 flutter create business_card_app
 cd business_card_app

@@ -1,0 +1,20 @@
+name: week01_flutter_examples
+description: Week 1 Flutter examples (widgets from lecture 1.1), each runnable on its own.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # provider: dependency injection / state sharing (used in 05 and 07)
+  provider: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,51 @@
+# Mobile Programming 2026 - Flutter
+
+Course material for the mobile programming course (Dart and Flutter), 2026.
+
+This repository grows **week by week**. The tables below list everything that is available
+**so far**; this page is updated each week when new material is added.
+
+*Last updated: 20 September 2026 (week 1).*
+
+## Course material so far
+
+### Setup
+
+| Material | Description |
+|---|---|
+| [Install guide - Android Studio edition](lectures/001_install.pdf) | Set up Flutter with Android Studio on Windows, macOS or Linux |
+| [Install guide - VS Code edition](lectures/001_install_vscode.pdf) | Set up Flutter with Visual Studio Code, with or without Android Studio |
+
+### Week 1 - Introduction to Mobile Applications using Flutter
+
+| Material | Description |
+|---|---|
+| [Lecture notes](lectures/week01_intro.pdf) | What the course covers, Dart, Flutter, Git and GitHub, your first Dart programs, console input |
+| [Running the programs in VS Code](lectures/week01_programs_vscode.pdf) | How to run every week 1 program in VS Code, with a short description of each one |
+| [Code: slide examples](code/week01/slides) | 7 Dart programs from the slides (hello world, variables and types, loops, console input) |
+| [Code: lecture examples](code/week01/lect_01_01) | 8 Dart programs from the lecture notes (collections, patterns, classes, async, streams, null safety, extensions, records) and the quick-start commands |
+| [Code: Flutter examples](code/week01/flutter_examples) | A small Flutter project with 11 widget examples and automated tests |
+
+### Coming next
+
+| Week | Status |
+|---|---|
+| Week 2 | to be added |
+| Later weeks | to be added week by week |
+
+## How to use this repository
+
+1. Install Flutter (it includes Dart) with one of the install guides above.
+2. Get the code: `git clone https://github.com/maoude/mobile_pro_2026.git`
+3. Open the folder in VS Code, then follow *Running the programs in VS Code*.
+
+Every program file starts with a comment block that says **what you learn**, **how to run it**
+and the **expected output**. Run the program, then compare your result with that block.
+
+## Repository layout
+
+```
+lectures/     PDFs: install guides, lecture notes, guides (one set per week)
+code/         code for each week
+  week01/     slides/  lect_01_01/  flutter_examples/
+```
