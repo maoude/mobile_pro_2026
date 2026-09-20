@@ -35,3 +35,9 @@ local.properties
 
 # LaTeX sources stay local; only the compiled PDFs are pushed
 *.tex
+
+# Screenshots used by the .tex sources stay local
+lectures/img/
+
+# Code examples stay local (not pushed to GitHub)
+/code/
