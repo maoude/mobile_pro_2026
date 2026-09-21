@@ -40,6 +40,11 @@ flutter run -t lib/02_hello_text.dart -d chrome
 | `07_column.dart` | 23 | two texts one below the other (`Column`, `SizedBox`) |
 | `08_row.dart` | 24 | a `Row` with three texts spread evenly, inside the `Column` |
 | `09_logical_pixels.dart` | 25 | the screen size in logical and physical pixels (`MediaQuery`) |
+| `10_appbar_options.dart` | extra | more `AppBar` options: `leading`, `actions`, `backgroundColor`, `elevation`, `IconButton` |
+| `11_scaffold_extras.dart` | extra | more `Scaffold` slots: `backgroundColor`, `bottomNavigationBar`, `Card`, `Padding` |
+| `12_expanded.dart` | extra | `Expanded` and `flex`: sharing the free space 1 : 2 : 1 |
+
+The three "extra" examples are not in the slides; they add options that almost every app uses.
 
 ## Tests
 

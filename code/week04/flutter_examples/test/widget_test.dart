@@ -27,6 +27,9 @@ import 'package:week04_flutter_examples/06_custom_widget.dart' as step06;
 import 'package:week04_flutter_examples/07_column.dart' as step07;
 import 'package:week04_flutter_examples/08_row.dart' as step08;
 import 'package:week04_flutter_examples/09_logical_pixels.dart';
+import 'package:week04_flutter_examples/10_appbar_options.dart' as step10;
+import 'package:week04_flutter_examples/11_scaffold_extras.dart' as step11;
+import 'package:week04_flutter_examples/12_expanded.dart' as step12;
 
 // The text style that is really used for a Text widget on screen.
 TextStyle effectiveStyle(WidgetTester tester, String text) {
@@ -161,5 +164,72 @@ void main() {
     expect(find.text('Physical size: 800.0 x 1600.0'), findsOneWidget);
     expect(
         find.text('16 logical pixels = 32.0 physical pixels'), findsOneWidget);
+  });
+
+  // ---------------- Going further (not in the slides) ----------------
+  testWidgets('10 AppBar has leading and action icons that react to taps', (
+    tester,
+  ) async {
+    await tester.pumpWidget(const step10.MyApp());
+    final bar = tester.widget<AppBar>(find.byType(AppBar));
+    expect(bar.backgroundColor, Colors.teal);
+    expect(bar.foregroundColor, Colors.white);
+    expect(bar.elevation, 4);
+    expect(find.byIcon(Icons.menu), findsOneWidget); // leading (left)
+    expect(find.byIcon(Icons.search), findsOneWidget); // actions (right)
+    expect(find.byIcon(Icons.settings), findsOneWidget);
+    // the leading icon is left of the title, the actions are right of it
+    final title = tester.getCenter(find.text('AppBar options')).dx;
+    expect(tester.getCenter(find.byIcon(Icons.menu)).dx, lessThan(title));
+    expect(
+        tester.getCenter(find.byIcon(Icons.settings)).dx, greaterThan(title));
+
+    await tester.tap(find.byIcon(Icons.settings));
+    await tester.pump(); // show the SnackBar
+    expect(find.text('Settings tapped'), findsOneWidget);
+  });
+
+  testWidgets('11 Scaffold slots: background, Card body, bottom bar', (
+    tester,
+  ) async {
+    await tester.pumpWidget(const step11.MyApp());
+    final scaffold = tester.widget<Scaffold>(find.byType(Scaffold));
+    expect(scaffold.backgroundColor, Colors.blueGrey.shade50);
+    expect(find.text('Scaffold extras'), findsOneWidget);
+    expect(find.byType(Card), findsOneWidget);
+    expect(find.text('A Card in the body'), findsOneWidget);
+    // the bottom bar is at the bottom of the (600 px high) screen
+    expect(find.text('Bottom bar'), findsOneWidget);
+    expect(tester.getCenter(find.text('Bottom bar')).dy, greaterThan(500));
+    // only one Scaffold on the page
+    expect(find.byType(Scaffold), findsOneWidget);
+  });
+
+  testWidgets('12 Expanded shares the free height 1 : 2 : 1', (tester) async {
+    await tester.pumpWidget(const step12.MyApp());
+    double height(String key) =>
+        tester.getSize(find.byKey(ValueKey(key))).height;
+
+    final fixed = height('fixed');
+    final a = height('box-a');
+    final b = height('box-b');
+    final c = height('box-c');
+
+    expect(fixed, 60); // the fixed strip keeps its size
+    expect(b, closeTo(2 * a, 0.01)); // flex 2 is twice flex 1
+    expect(c, closeTo(a, 0.01)); // flex 1 and flex 1 are equal
+    // together they fill the body: 600 (screen) - 56 (app bar)
+    expect(fixed + a + b + c, closeTo(600 - 56, 0.01));
+  });
+
+  testWidgets('12 the shares follow the screen size', (tester) async {
+    addTearDown(tester.view.reset);
+    tester.view.devicePixelRatio = 1.0;
+    tester.view.physicalSize = const Size(400, 1000); // a tall phone
+    await tester.pumpWidget(const step12.MyApp());
+    final a = tester.getSize(find.byKey(const ValueKey('box-a'))).height;
+    final b = tester.getSize(find.byKey(const ValueKey('box-b'))).height;
+    expect(b, closeTo(2 * a, 0.01)); // still 1 : 2, on another screen
+    expect(a, closeTo((1000 - 56 - 60) / 4, 0.01));
   });
 }

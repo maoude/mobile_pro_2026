@@ -46,9 +46,9 @@ This repository grows **week by week**. The tables below list everything that is
 
 | Material | Description |
 |---|---|
-| [Lecture notes](lectures/week04_intro.pdf) | Widgets, stateless and stateful widgets, creating and running a Flutter project, the Hello World app step by step (`Scaffold`, `AppBar`, `Text`, custom widgets, `Column`, `Row`), logical pixels |
+| [Lecture notes](lectures/week04_intro.pdf) | Widgets, stateless and stateful widgets, creating and running a Flutter project, the Hello World app step by step (`Scaffold`, `AppBar`, `Text`, custom widgets, `Column`, `Row`), logical pixels, and going further: more `AppBar` and `Scaffold` options, `Expanded` |
 | [Running the Flutter apps in VS Code](lectures/week04_programs_vscode.pdf) | How to prepare and run the week 4 apps in VS Code, and what each step should show on the screen |
-| [Code: Flutter examples](code/week04/flutter_examples) | A small Flutter project: the Hello World app in 10 runnable steps, with automated tests |
+| [Code: Flutter examples](code/week04/flutter_examples) | A small Flutter project: the Hello World app in 10 runnable steps, plus 3 extra examples (`AppBar` options, `Scaffold` extras, `Expanded`), with automated tests |
 
 ### Coming next
 
