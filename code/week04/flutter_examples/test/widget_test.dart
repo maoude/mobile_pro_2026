@@ -30,6 +30,9 @@ import 'package:week04_flutter_examples/09_logical_pixels.dart';
 import 'package:week04_flutter_examples/10_appbar_options.dart' as step10;
 import 'package:week04_flutter_examples/11_scaffold_extras.dart' as step11;
 import 'package:week04_flutter_examples/12_expanded.dart' as step12;
+import 'package:week04_flutter_examples/13_widget_types.dart' as step13;
+import 'package:week04_flutter_examples/14_gestures.dart' as step14;
+import 'package:week04_flutter_examples/15_widget_tree_dump.dart' as step15;
 
 // The text style that is really used for a Text widget on screen.
 TextStyle effectiveStyle(WidgetTester tester, String text) {
@@ -231,5 +234,115 @@ void main() {
     final b = tester.getSize(find.byKey(const ValueKey('box-b'))).height;
     expect(b, closeTo(2 * a, 0.01)); // still 1 : 2, on another screen
     expect(a, closeTo((1000 - 56 - 60) / 4, 0.01));
+  });
+
+  // ---------------- Part 2: architecture and widget types ----------------
+  testWidgets('13 visible widgets, layout widgets, buttons change the state', (
+    tester,
+  ) async {
+    await tester.pumpWidget(const step13.WidgetTypesApp());
+
+    // visible widgets
+    final hello = tester.widget<Text>(find.text('Hello, Flutter!'));
+    expect(hello.textAlign, TextAlign.center);
+    expect(hello.style?.fontWeight, FontWeight.bold);
+    expect(find.byType(ElevatedButton), findsOneWidget);
+    expect(find.byType(TextButton), findsOneWidget);
+    expect(find.byType(OutlinedButton), findsOneWidget);
+    final image = tester.widget<Image>(find.byType(Image));
+    expect((image.image as AssetImage).assetName, 'assets/logo.png');
+    expect(find.byIcon(Icons.favorite), findsOneWidget);
+
+    // the buttons change the state of the page
+    expect(find.text('Last button: none'), findsOneWidget);
+    await tester.tap(find.byType(OutlinedButton));
+    await tester.pump();
+    expect(find.text('Last button: OutlinedButton'), findsOneWidget);
+    await tester.tap(find.byType(ElevatedButton));
+    await tester.pump();
+    expect(find.text('Last button: ElevatedButton'), findsOneWidget);
+
+    // layout widgets: the three labels of the Row are on one line...
+    final r1 = tester.getCenter(find.text('Row 1'));
+    final r2 = tester.getCenter(find.text('Row 2'));
+    final r3 = tester.getCenter(find.text('Row 3'));
+    expect(r1.dy, closeTo(r2.dy, 1));
+    expect(r2.dy, closeTo(r3.dy, 1));
+    expect(r1.dx, lessThan(r2.dx));
+    expect(r2.dx, lessThan(r3.dx));
+    // ...and in the Stack the smaller red square is drawn on the blue one
+    Finder square(Color c) =>
+        find.byWidgetPredicate((w) => w is Container && w.color == c);
+    final blue = tester.getRect(square(Colors.blue));
+    final red = tester.getRect(square(Colors.red.shade300));
+    expect(blue.contains(red.topLeft), isTrue);
+    expect(blue.contains(red.bottomRight), isTrue);
+    expect(red.center.dx, closeTo(blue.center.dx, 0.01));
+    expect(red.center.dy, closeTo(blue.center.dy, 0.01));
+  });
+
+  testWidgets('14 GestureDetector: tap adds 1, long press resets', (
+    tester,
+  ) async {
+    await tester.pumpWidget(const step14.GestureApp());
+    final area = find.byKey(const ValueKey('touch-area'));
+    expect(find.text('Taps: 0'), findsOneWidget);
+
+    await tester.tap(area);
+    await tester.pump();
+    expect(find.text('Taps: 1'), findsOneWidget);
+    await tester.tap(area);
+    await tester.tap(area);
+    await tester.pump();
+    expect(find.text('Taps: 3'), findsOneWidget);
+
+    await tester.longPress(area);
+    await tester.pump();
+    expect(find.text('Taps: 0'), findsOneWidget);
+    expect(find.byIcon(Icons.touch_app), findsOneWidget);
+  });
+
+  testWidgets('15 debugDumpApp prints the widget tree, outside in', (
+    tester,
+  ) async {
+    final lines = <String>[];
+    final original = debugPrint;
+    debugPrint = (String? message, {int? wrapWidth}) {
+      if (message != null) lines.add(message);
+    };
+    try {
+      await tester.pumpWidget(const step15.MyApp());
+      expect(find.text('Hello'), findsOneWidget);
+      expect(find.text('World'), findsOneWidget);
+      await tester.tap(find.byType(FloatingActionButton));
+
+      final dump = lines.join('\n');
+      expect(dump, contains('widget tree of the running app'));
+
+      // Each widget must appear AFTER the widget that contains it.
+      // (Siblings, such as AppBar and Center, can appear in any order.)
+      int after(String name, int from) {
+        final at = dump.indexOf(name, from);
+        expect(at, greaterThanOrEqualTo(0),
+            reason: '$name not found after $from');
+        return at + name.length;
+      }
+
+      var p = after('MyApp', 0);
+      p = after('MaterialApp', p);
+      p = after('HomePage', p);
+      final scaffold = after('Scaffold', p);
+      after('AppBar', scaffold); // inside the Scaffold
+      final center = after('Center', scaffold); // inside the Scaffold
+      final column = after('Column', center); // the Center contains the Column
+      expect(dump.indexOf('Text("Hello"', column), greaterThanOrEqualTo(0));
+      expect(dump.indexOf('Text("World"', column), greaterThanOrEqualTo(0));
+      final fab =
+          after('FloatingActionButton', scaffold); // inside the Scaffold
+      after('Icon', fab); // the button contains the Icon
+    } finally {
+      // Flutter checks that debugPrint is back to normal when the test ends.
+      debugPrint = original;
+    }
   });
 }

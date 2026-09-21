@@ -43,8 +43,13 @@ flutter run -t lib/02_hello_text.dart -d chrome
 | `10_appbar_options.dart` | extra | more `AppBar` options: `leading`, `actions`, `backgroundColor`, `elevation`, `IconButton` |
 | `11_scaffold_extras.dart` | extra | more `Scaffold` slots: `backgroundColor`, `bottomNavigationBar`, `Card`, `Padding` |
 | `12_expanded.dart` | extra | `Expanded` and `flex`: sharing the free space 1 : 2 : 1 |
+| `13_widget_types.dart` | part 2 | visible widgets (`Text`, buttons, `Image`, `Icon`) and layout widgets (`Row`, `Padding`, `Stack`) in one page |
+| `14_gestures.dart` | part 2 | `GestureDetector`: tap adds 1, long press resets; `Stack` and `Positioned` |
+| `15_widget_tree_dump.dart` | part 2 | `debugDumpApp()` prints the real widget tree of the running app |
 
-The three "extra" examples are not in the slides; they add options that almost every app uses.
+The three "extra" examples (10 to 12) are not in the slides; they add options that almost every app uses.
+
+Examples 13 to 15 belong to **part 2** of the week, `../../lectures/week04_architecture_widgets.pdf` (Flutter architecture and widget types). Example 13 uses the image `assets/logo.png`; the folder is declared in `pubspec.yaml`.
 
 ## Tests
 

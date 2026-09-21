@@ -16,3 +16,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  # Images and other files used by the app (see 13_widget_types.dart)
+  assets:
+    - assets/
