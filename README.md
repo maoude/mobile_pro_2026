@@ -5,7 +5,7 @@ Course material for the mobile programming course (Dart and Flutter), 2026.
 This repository grows **week by week**. The tables below list everything that is available
 **so far**; this page is updated each week when new material is added.
 
-*Last updated: 21 September 2026 (week 3).*
+*Last updated: 21 September 2026 (week 4).*
 
 ## Course material so far
 
@@ -42,11 +42,19 @@ This repository grows **week by week**. The tables below list everything that is
 | [Running the programs in VS Code](lectures/week03_programs_vscode.pdf) | How to run every week 3 program in VS Code, with a short description and the expected output of each one |
 | [Code: slide examples](code/week03/slides) | 4 Dart programs and the `circle.dart` library, each with its expected output |
 
+### Week 4 - An Introduction to Flutter
+
+| Material | Description |
+|---|---|
+| [Lecture notes](lectures/week04_intro.pdf) | Widgets, stateless and stateful widgets, creating and running a Flutter project, the Hello World app step by step (`Scaffold`, `AppBar`, `Text`, custom widgets, `Column`, `Row`), logical pixels |
+| [Running the Flutter apps in VS Code](lectures/week04_programs_vscode.pdf) | How to prepare and run the week 4 apps in VS Code, and what each step should show on the screen |
+| [Code: Flutter examples](code/week04/flutter_examples) | A small Flutter project: the Hello World app in 10 runnable steps, with automated tests |
+
 ### Coming next
 
 | Week | Status |
 |---|---|
-| Week 4 | to be added |
+| Week 5 | to be added |
 | Later weeks | to be added week by week |
 
 ## How to use this repository
@@ -67,4 +75,5 @@ code/         code for each week
   week01/     slides/  lect_01_01/  flutter_examples/
   week02/     slides/
   week03/     slides/
+  week04/     flutter_examples/
 ```
