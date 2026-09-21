@@ -48,8 +48,10 @@ This repository grows **week by week**. The tables below list everything that is
 |---|---|
 | [Lecture notes](lectures/week04_intro.pdf) | Widgets, stateless and stateful widgets, creating and running a Flutter project, the Hello World app step by step (`Scaffold`, `AppBar`, `Text`, custom widgets, `Column`, `Row`), logical pixels, and going further: more `AppBar` and `Scaffold` options, `Expanded` |
 | [Part 2: Flutter architecture and widget types](lectures/week04_architecture_widgets.pdf) | The layers of Flutter (embedder, engine, framework), the widget tree and how to print it, visible and layout widgets, `GestureDetector`, stateless and stateful widgets |
+| [Part 3: Widgets, their types and parameters](lectures/week04_widgets_parameters.pdf) | The two types of widgets (visible and layout) and the main parameters of `Text`, buttons, `Image`, `Icon`, `Row`, `Column`, `Center`, `Padding`, `Stack`, `Scaffold`; Material and Cupertino; recipes on `Scaffold` (bottom bar, drawer), a custom `AppBar`, `Expanded` with `ListView`, and `Container` with `BoxDecoration`; a guide to the code in the `examples` project; exercises |
 | [Running the Flutter apps in VS Code](lectures/week04_programs_vscode.pdf) | How to prepare and run the week 4 apps in VS Code, and what each step should show on the screen |
 | [Code: Flutter examples](code/week04/flutter_examples) | A small Flutter project: the Hello World app in 10 runnable steps, plus 6 more examples (`AppBar` options, `Scaffold` extras, `Expanded`, widget types, gestures, the widget-tree dump), with automated tests |
+| [Code: part 3 examples](code/week04/examples) | A second small Flutter project for part 3: the full widgets program, and recipes on `Scaffold` with a bottom bar and a drawer, the Cupertino style, a custom `AppBar`, `Expanded` and `ListView`, and `Container`, with automated tests |
 
 ### Coming next
 
@@ -76,5 +78,5 @@ code/         code for each week
   week01/     slides/  lect_01_01/  flutter_examples/
   week02/     slides/
   week03/     slides/
-  week04/     flutter_examples/
+  week04/     flutter_examples/  examples/
 ```

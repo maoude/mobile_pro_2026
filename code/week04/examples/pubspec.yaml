@@ -1,0 +1,22 @@
+name: week04_examples
+description: Week 4, part 3 - the widgets, their types and parameters, and the recipes on Scaffold, AppBar and Expanded. Each file in lib is a runnable app.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # Images and other files used by the apps (see 01_widgets_full_program.dart)
+  assets:
+    - assets/

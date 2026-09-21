@@ -51,6 +51,10 @@ The three "extra" examples (10 to 12) are not in the slides; they add options th
 
 Examples 13 to 15 belong to **part 2** of the week, `../../lectures/week04_architecture_widgets.pdf` (Flutter architecture and widget types). Example 13 uses the image `assets/logo.png`; the folder is declared in `pubspec.yaml`.
 
+## Part 3: the `examples` project
+
+The code of **part 3**, `../../lectures/week04_widgets_parameters.pdf` (widgets, their types and parameters), is in a second small project, `examples/`: the full widgets program (`01`) and recipes on `Scaffold` with a bottom bar (`02`) and a drawer (`06`), a custom `AppBar` (`03`), `Expanded` (`04`, `05`), the Cupertino style (`07`) and `Container` (`08`). It has its own `README.md`, its own tests (`cd examples`, then `flutter test`) and runs the same way: `flutter run -t lib/01_widgets_full_program.dart`.
+
 ## Tests
 
 `test/widget_test.dart` starts each example in a test window and checks that the screen shows
