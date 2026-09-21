@@ -5,7 +5,7 @@ Course material for the mobile programming course (Dart and Flutter), 2026.
 This repository grows **week by week**. The tables below list everything that is available
 **so far**; this page is updated each week when new material is added.
 
-*Last updated: 21 September 2026 (week 2).*
+*Last updated: 21 September 2026 (week 3).*
 
 ## Course material so far
 
@@ -34,11 +34,19 @@ This repository grows **week by week**. The tables below list everything that is
 | [Running the programs in VS Code](lectures/week02_programs_vscode.pdf) | How to run every week 2 program in VS Code, with a short description and the expected output of each one |
 | [Code: slide examples](code/week02/slides) | 15 Dart programs from the slides, each with its expected output |
 
+### Week 3 - Intermediate Dart Programming
+
+| Material | Description |
+|---|---|
+| [Lecture notes](lectures/week03_intro.pdf) | Classes and objects, constructors, private fields, getters and setters, `toString`, named constructors, inheritance |
+| [Running the programs in VS Code](lectures/week03_programs_vscode.pdf) | How to run every week 3 program in VS Code, with a short description and the expected output of each one |
+| [Code: slide examples](code/week03/slides) | 4 Dart programs and the `circle.dart` library, each with its expected output |
+
 ### Coming next
 
 | Week | Status |
 |---|---|
-| Week 3 | to be added |
+| Week 4 | to be added |
 | Later weeks | to be added week by week |
 
 ## How to use this repository
@@ -58,4 +66,5 @@ lectures/     PDFs: install guides, lecture notes, guides (one set per week)
 code/         code for each week
   week01/     slides/  lect_01_01/  flutter_examples/
   week02/     slides/
+  week03/     slides/
 ```
