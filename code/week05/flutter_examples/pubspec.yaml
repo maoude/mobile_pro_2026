@@ -1,0 +1,18 @@
+name: week05_flutter_examples
+description: Week 5 Flutter examples - interactive applications with stateful widgets, TextField and buttons; each step runnable on its own.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

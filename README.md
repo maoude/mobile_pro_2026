@@ -5,7 +5,7 @@ Course material for the mobile programming course (Dart and Flutter), 2026.
 This repository grows **week by week**. The tables below list everything that is available
 **so far**; this page is updated each week when new material is added.
 
-*Last updated: 21 September 2026 (week 4).*
+*Last updated: 21 September 2026 (week 5).*
 
 ## Course material so far
 
@@ -53,11 +53,22 @@ This repository grows **week by week**. The tables below list everything that is
 | [Code: Flutter examples](code/week04/flutter_examples) | A small Flutter project: the Hello World app in 10 runnable steps, plus 6 more examples (`AppBar` options, `Scaffold` extras, `Expanded`, widget types, gestures, the widget-tree dump), with automated tests |
 | [Code: part 3 examples](code/week04/examples) | A second small Flutter project for part 3: the full widgets program, and recipes on `Scaffold` with a bottom bar and a drawer, the Cupertino style, a custom `AppBar`, `Expanded` and `ListView`, and `Container`, with automated tests |
 
+### Week 5 - Creating Interactive Applications
+
+| Material | Description |
+|---|---|
+| [Lecture notes](lectures/week05_intro.pdf) | Stateful widgets and `setState`, the `State` life cycle (`initState`, `build`, `dispose`, ...), the `TextField` (`onChanged`, `onSubmitted`, `InputDecoration`), your first interactive app, spreading an app over several files, a custom `TextField` widget and callbacks, the sum app, buttons and `ElevatedButton` styling, a complete Stopwatch app (`Timer`, buttons, laps), scrolling with `ListView`; going further: `TextEditingController`, reading numbers safely |
+| [Part 2: Gestures and state](lectures/week05_gestures_state.pdf) | The two levels of Flutter gestures (pointer events with `Listener`, gestures with `GestureDetector`), tap, double tap, long press, drag, pan, pinch, the gesture arena; state: ephemeral state, lifting state up, `ChangeNotifier`, the `provider` package; corrections to the printed text, common errors, exercises |
+| [Part 3: Forms and validation](lectures/week05_forms_validation.pdf) | `DropdownButton` (`items`, `value`, `onChanged`); grouping fields with `Form` and reaching them with `GlobalKey<FormState>`; validating a `TextFormField`; running every field's validator with `validate()` and clearing a form with `reset()`; composing small validator functions; `AutovalidateMode`; restricting typing with `inputFormatters`; `TextEditingController.addListener`; `Form.of(context)`; writing a custom `FormField<T>`; corrections to the printed text (verified compile errors under null safety), common errors, exercises |
+| [Running the Flutter apps in VS Code](lectures/week05_programs_vscode.pdf) | How to prepare and run the week 5 apps in VS Code, and what each one should show on the screen |
+| [Code: Flutter examples](code/week05/flutter_examples) | A small Flutter project: 14 runnable examples (stateful counter, `setState`, `TextField`, custom widget, the sum app in several files, controllers, button styles, safe number input, the `State` life cycle, the Stopwatch app in 3 steps, scrolling), with automated tests |
+| [Code: parts 2 and 3 examples](code/week05/examples) | A second small Flutter project for parts 2 and 3: 17 runnable examples (pointer events, tap, drag, pan, pinch, the gesture arena, ephemeral state, lifting state up, `ChangeNotifier`, `provider`, `DropdownButton`, `Form` validation, composed validators, `inputFormatters`, controller listeners, `Form.of`, a custom `FormField`), with automated tests |
+
 ### Coming next
 
 | Week | Status |
 |---|---|
-| Week 5 | to be added |
+| Week 6 | to be added |
 | Later weeks | to be added week by week |
 
 ## How to use this repository
@@ -79,4 +90,5 @@ code/         code for each week
   week02/     slides/
   week03/     slides/
   week04/     flutter_examples/  examples/
+  week05/     flutter_examples/  examples/
 ```

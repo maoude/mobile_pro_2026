@@ -1,0 +1,19 @@
+name: week05_examples
+description: Week 5, parts 2 and 3 - gestures (pointer events, tap, drag, pan, pinch, the gesture arena), state (ephemeral state, lifting state up, ChangeNotifier, provider), and forms (DropdownButton, Form, GlobalKey<FormState>, TextFormField validation, inputFormatters, controller listeners, Form.of, custom FormField widgets). Each file in lib is a runnable app.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.5+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
