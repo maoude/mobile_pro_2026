@@ -39,9 +39,9 @@ class MyApp extends StatelessWidget {
         body: Column(
           // The widgets of the column, from top to bottom.
           children: <Widget>[
-            SizedBox(height: 16.0), // 16 logical pixels of empty space
+            SizedBox(height: 64.0), // 16 logical pixels of empty space
             MyTextWidget(text: 'Text 1'),
-            SizedBox(height: 16.0),
+            SizedBox(height: 128.0),
             MyTextWidget(text: 'Text 2'),
           ],
         ),

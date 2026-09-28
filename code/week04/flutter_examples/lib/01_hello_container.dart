@@ -37,6 +37,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // A widget that fills the screen with a color.
-    return Container(color: Colors.white);
+    return Container(color: const Color.fromARGB(255, 182, 17, 99));
   }
 }
