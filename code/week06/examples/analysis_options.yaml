@@ -1,0 +1,9 @@
+# The recommended lints for Flutter apps (https://dart.dev/lints).
+# Run them with:  flutter analyze
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # The example files start with a number (00_..., 01_...) so that they are
+    # listed in the order of the lecture.
+    file_names: false

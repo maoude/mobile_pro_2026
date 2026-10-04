@@ -1,0 +1,14 @@
+name: week06_flutter_examples
+description: Week 6 restaurant menu with item selection, total price and a selected-items view.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

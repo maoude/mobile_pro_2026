@@ -1,0 +1,19 @@
+name: week06_examples
+description: Week 6, part 2 - interactivity and navigation. ListView.builder with a ScrollController, a login form, push and pushReplacement, platform-aware dialogs and dialogs that return a value, bottom sheets, and the complete Stopwatch app. Each file in lib is a runnable app.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

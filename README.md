@@ -5,7 +5,7 @@ Course material for the mobile programming course (Dart and Flutter), 2026.
 This repository grows **week by week**. The tables below list everything that is available
 **so far**; this page is updated each week when new material is added.
 
-*Last updated: 21 September 2026 (week 5).*
+*Last updated: 5 October 2026 (week 6).*
 
 ## Course material so far
 
@@ -64,11 +64,20 @@ This repository grows **week by week**. The tables below list everything that is
 | [Code: Flutter examples](code/week05/flutter_examples) | A small Flutter project: 14 runnable examples (stateful counter, `setState`, `TextField`, custom widget, the sum app in several files, controllers, button styles, safe number input, the `State` life cycle, the Stopwatch app in 3 steps, scrolling), with automated tests |
 | [Code: parts 2 and 3 examples](code/week05/examples) | A second small Flutter project for parts 2 and 3: 17 runnable examples (pointer events, tap, drag, pan, pinch, the gesture arena, ephemeral state, lifting state up, `ChangeNotifier`, `provider`, `DropdownButton`, `Form` validation, composed validators, `inputFormatters`, controller listeners, `Form.of`, a custom `FormField`), with automated tests |
 
+### Week 6 - Flutter Routes
+
+| Material | Description |
+|---|---|
+| [Lecture notes](lectures/week06_intro.pdf) | Screens and the route stack, `Navigator.push` and `pop`, `BuildContext`, icons, a two-screen app, passing employee data with `RouteSettings` and `ModalRoute`, controllers and input validation, a salary app, typed constructor parameters, common errors and exercises |
+| [Code: restaurant menu](code/week06/flutter_examples) | Flutter app with checkboxes, a running total, a selected-items view, reset, `ListView.builder`, network images and AppBar actions |
+| [Part 2: Interactivity and navigation](lectures/week06_interactivity_navigation.pdf) | `ListView.builder`, `itemExtent`, `Scrollbar` and `ScrollController`; a login `Form`; `push`, `pushReplacement` and `pushAndRemoveUntil`, passing data through the constructor; Material, Cupertino and platform-aware dialogs, `AlertDialog.adaptive`; dialogs that return a value and `mounted`; modal and persistent bottom sheets, `Scaffold.of` and `Builder`; the complete Stopwatch app; corrections to the printed text (verified), common errors, exercises |
+| [Code: part 2 examples](code/week06/examples) | A second small Flutter project: 7 runnable examples (a lap list with `ListView.builder`, a login form, push versus pushReplacement, platform-aware dialogs, dialog results, bottom sheets, the complete Stopwatch app in four files), with automated tests |
+
 ### Coming next
 
 | Week | Status |
 |---|---|
-| Week 6 | to be added |
+| Week 7 | to be added |
 | Later weeks | to be added week by week |
 
 ## How to use this repository
@@ -91,4 +100,5 @@ code/         code for each week
   week03/     slides/
   week04/     flutter_examples/  examples/
   week05/     flutter_examples/  examples/
+  week06/     flutter_examples/  examples/
 ```
