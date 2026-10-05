@@ -1,0 +1,17 @@
+name: week07_maps_examples
+description: Week 7 Google Maps, foreground location and sample markers.
+publish_to: 'none'
+version: 1.0.0
+environment:
+  sdk: ^3.5.0
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.14.2
+  location: ^10.0.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true

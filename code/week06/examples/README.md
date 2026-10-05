@@ -37,6 +37,14 @@ flutter run -t lib/06_stopwatch_app/main.dart -d chrome
 | `04_dialog_result.dart` | dialogs that return a value: a `SimpleDialog` to choose a distance, and a confirmation that returns `true`, `false` or `null` |
 | `05_bottom_sheets.dart` | a modal bottom sheet that returns the chosen sort order, and a persistent bottom sheet that closes itself after 5 seconds |
 | `06_stopwatch_app/` | the complete app in four files: login, `pushReplacement` to the stopwatch, laps, a dialog when it stops, a bottom sheet per lap, and Log out with confirmation |
+| `07_named_routes.dart` | categories → filtered list → detail; `pushNamed`, route constants, `onGenerateRoute`, invalid arguments and unknown routes, enum labels, and a selection returned by `pop` |
+
+Example 07 supplements [Flutter Routes](../../../lectures/week06_intro.pdf).
+Run `flutter run -t lib/07_named_routes.dart`. Choose Food, then Burger, then
+**Choose this item**: the list shows **Chosen: Burger**. Opening Salad and returning
+with Back keeps that choice. Named routes are taught here for small apps and existing
+code; Router-based navigation is more suitable for advanced URL and deep-link needs.
+`test/navigation_test.dart` checks filtering, result delivery, cancellation and errors.
 
 ## Differences from the printed text
 

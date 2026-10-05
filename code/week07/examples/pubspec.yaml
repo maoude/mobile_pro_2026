@@ -1,0 +1,19 @@
+name: week07_examples
+description: Week 7 package examples, HTTP, number formatting and a local area package.
+publish_to: 'none'
+version: 1.0.0
+environment:
+  sdk: ^3.5.0
+dependencies:
+  flutter:
+    sdk: flutter
+  area:
+    path: packages/area
+  intl: ^0.20.3
+  http: ^1.6.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true

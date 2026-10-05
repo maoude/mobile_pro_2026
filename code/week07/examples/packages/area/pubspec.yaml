@@ -1,0 +1,11 @@
+name: area
+description: Teaching package for validated rectangle and triangle area calculations.
+publish_to: 'none'
+version: 1.0.0
+environment:
+  sdk: ^3.5.0
+dependencies:
+  intl: ^0.20.3
+dev_dependencies:
+  test: ^1.31.0
+  lints: ^6.1.0

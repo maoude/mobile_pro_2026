@@ -5,7 +5,7 @@ Course material for the mobile programming course (Dart and Flutter), 2026.
 This repository grows **week by week**. The tables below list everything that is available
 **so far**; this page is updated each week when new material is added.
 
-*Last updated: 5 October 2026 (week 6).*
+*Last updated: 5 October 2026 (week 7).*
 
 ## Course material so far
 
@@ -69,15 +69,25 @@ This repository grows **week by week**. The tables below list everything that is
 | Material | Description |
 |---|---|
 | [Lecture notes](lectures/week06_intro.pdf) | Screens and the route stack, `Navigator.push` and `pop`, `BuildContext`, icons, a two-screen app, passing employee data with `RouteSettings` and `ModalRoute`, controllers and input validation, a salary app, typed constructor parameters, common errors and exercises |
+| [Code: named-route navigation](code/week06/examples/lib/07_named_routes.dart) | Category, list and detail screens; route names, `onGenerateRoute`, checked arguments, collection filtering, enum labels, returned results and error handling |
 | [Code: restaurant menu](code/week06/flutter_examples) | Flutter app with checkboxes, a running total, a selected-items view, reset, `ListView.builder`, network images and AppBar actions |
 | [Part 2: Interactivity and navigation](lectures/week06_interactivity_navigation.pdf) | `ListView.builder`, `itemExtent`, `Scrollbar` and `ScrollController`; a login `Form`; `push`, `pushReplacement` and `pushAndRemoveUntil`, passing data through the constructor; Material, Cupertino and platform-aware dialogs, `AlertDialog.adaptive`; dialogs that return a value and `mounted`; modal and persistent bottom sheets, `Scaffold.of` and `Builder`; the complete Stopwatch app; corrections to the printed text (verified), common errors, exercises |
 | [Code: part 2 examples](code/week06/examples) | A second small Flutter project: 7 runnable examples (a lap list with `ListView.builder`, a login form, push versus pushReplacement, platform-aware dialogs, dialog results, bottom sheets, the complete Stopwatch app in four files), with automated tests |
+
+### Week 7 - Using Flutter Packages
+
+| Material | Description |
+|---|---|
+| [Lecture notes](lectures/week07_packages.pdf) | Packages and plugins, pubspec dependencies, version constraints and lockfiles, `intl`, HTTP and JSON, development dependencies and lints, creating and testing a local package, exports and parts, Git and publication preparation, Google Maps configuration, foreground location, markers and a Places API (New) extension |
+| [Running the apps in VS Code](lectures/week07_programs_vscode.pdf) | Setup, commands, expected results, platform configuration and troubleshooting for the Week 7 projects |
+| [Code: packages practice](code/week07/examples) | Number formatting, HTTP loading and retry, an area calculator, and its reusable local Dart package, with automated tests |
+| [Code: maps and location](code/week07/maps_examples) | Fixed map, device-location workflow, sample markers and a combined app, with API-key setup instructions and permission tests |
 
 ### Coming next
 
 | Week | Status |
 |---|---|
-| Week 7 | to be added |
+| Week 8 | to be added |
 | Later weeks | to be added week by week |
 
 ## How to use this repository
@@ -101,4 +111,5 @@ code/         code for each week
   week04/     flutter_examples/  examples/
   week05/     flutter_examples/  examples/
   week06/     flutter_examples/  examples/
+  week07/     examples/  maps_examples/
 ```
